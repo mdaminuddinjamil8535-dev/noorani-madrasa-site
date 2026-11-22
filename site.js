@@ -66,4 +66,31 @@
       gallery.appendChild(figure);
     });
   }
-})();
+// শিক্ষক ও কর্মচারীদের পরিচিতি
+  const teacherList = document.getElementById("teacher-list");
+
+  if (teacherList) {
+    teacherList.replaceChildren();
+
+    (d.teachers || []).forEach((teacher, index) => {
+      const card = document.createElement("div");
+      card.className = "teacher-card";
+
+      const name = document.createElement("h3");
+      name.textContent = (index + 1) + ". " + teacher.name;
+
+      const role = document.createElement("p");
+      role.textContent = "পদবি: " + teacher.role;
+
+      const phone = document.createElement("p");
+      phone.textContent = "মোবাইল: " + teacher.phone;
+
+      const call = document.createElement("a");
+      call.className = "phone";
+      call.href = "tel:" + teacher.phone.replace(/[^\d]/g, "");
+      call.textContent = "☎ কল করুন";
+
+      card.append(name, role, phone, call);
+      teacherList.appendChild(card);
+    });
+  }})();
