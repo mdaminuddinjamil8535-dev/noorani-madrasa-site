@@ -33,7 +33,47 @@ section{padding:66px 0}.section-head{text-align:center;margin:0 auto 32px;max-wi
 footer{background:var(--deep);color:#eaf5ef;padding:26px 0;text-align:center}footer p{margin:4px}
 @media(max-width:760px){.nav{align-items:flex-start;flex-direction:column}.brand strong{font-size:16px}nav{gap:10px 14px}.hero{padding:60px 0}.about,.contact-grid{grid-template-columns:1fr}.facts{grid-template-columns:1fr}.features{grid-template-columns:1fr}.gallery{grid-template-columns:repeat(2,1fr)}.gallery img{height:170px}section{padding:48px 0}}
 @media(max-width:430px){.gallery{grid-template-columns:1fr}.gallery img{height:220px}.hero p{font-size:16px}}
-</style>
+.teachers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.teacher-card {
+  background: #fff;
+  border: 1px solid #e3eee7;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 5px 18px #1232;
+}
+
+.teacher-card h3 {
+  color: #075b3c;
+  font-size: 19px;
+  margin: 0 0 5px;
+}
+
+.teacher-card p {
+  color: #60736a;
+  margin: 5px 0;
+}
+
+.teacher-card .phone {
+  display: inline-block;
+  margin-top: 12px;
+}
+
+@media(max-width:760px) {
+  .teachers-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(max-width:430px) {
+  .teachers-grid {
+    grid-template-columns: 1fr;
+  }
+}</style>
 </head>
 <body>
 <div class="topline" id="topline">বিসমিল্লাহির রাহমানির রাহীম • ভর্তি চলছে</div>
@@ -67,7 +107,16 @@ footer{background:var(--deep);color:#eaf5ef;padding:26px 0;text-align:center}foo
 <section id="features"><div class="wrap"><div class="section-head"><span>কেন আমাদের মাদরাসা</span><h2>আমাদের বৈশিষ্ট্যসমূহ</h2><p>শিক্ষার্থীদের শিক্ষা, পরিচর্যা ও সার্বিক বিকাশে আমাদের উদ্যোগ।</p></div>
 <div class="features" id="feature-list"></div></div></section>
 
-<section id="gallery"><div class="wrap"><div class="section-head"><span>আমাদের কার্যক্রম</span><h2>ছবি গ্যালারি</h2><p>মাদরাসার ভবন, পাঠদান, শিক্ষার্থী ও বিভিন্ন আয়োজনের কিছু মুহূর্ত।</p></div>
+<section id="gallery"><div class="wrap"><div class="section-head"><span>আমাদের কার্যক্রম</span><h2> <section id="teachers">
+  <div class="wrap">
+    <div class="section-head">
+      <span>আমাদের শিক্ষকমণ্ডলী</span>
+      <h2>শিক্ষক ও কর্মচারীদের পরিচিতি</h2>
+      <p>আমাদের প্রতিষ্ঠানের শিক্ষক ও কর্মচারীদের নাম, পদবি ও যোগাযোগের নম্বর।</p>
+    </div>
+    <div class="teachers-grid" id="teacher-list"></div>
+  </div>
+</section> <a href="#teachers">শিক্ষকমণ্ডলী</a>ছবি গ্যালারি</h2><p>মাদরাসার ভবন, পাঠদান, শিক্ষার্থী ও বিভিন্ন আয়োজনের কিছু মুহূর্ত।</p></div>
 <div class="gallery" id="gallery-list"></div></div></section>
 
 <section class="contact" id="contact"><div class="wrap"><div class="section-head"><span>আমাদের সঙ্গে যোগাযোগ</span><h2>যোগাযোগের ঠিকানা</h2><p>ভর্তি ও অন্যান্য তথ্যের জন্য যোগাযোগ করুন।</p></div>
